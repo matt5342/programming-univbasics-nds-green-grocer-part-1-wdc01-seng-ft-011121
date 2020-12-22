@@ -21,7 +21,7 @@ def consolidate_cart(cart)
       item_hash[:count] = item_hash[:count] + 1
     end
     storage_array << item_hash[:item] 
-    # binding.pry
+
   end
 
 
