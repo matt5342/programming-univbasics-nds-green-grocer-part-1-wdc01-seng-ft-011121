@@ -17,20 +17,13 @@ def consolidate_cart(cart)
   consolidated.each do |item_hash|
     
     item_hash.store(:count, 1)
-    storage_array.include?(item_hash[:item])
-      
+    if storage_array.include?(item_hash[:item])
+      item_hash[:count] = item_hash[:count] + 1
+    end
     storage_array << item_hash[:item] 
     # binding.pry
   end
-  storage_array.each { |x| 
-  storage_array.count {|y| 
-  if  x == y 
-    
-  end
-  }
-    
-  }
-  binding.pry
+
 
 end
 
